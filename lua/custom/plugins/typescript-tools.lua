@@ -4,17 +4,18 @@ return {
   opts = {},
   config = function()
     require('typescript-tools').setup {
-      -- tsserver_plugins = { '@vue/typescript-plugin' },
-      init_options = {
-        plugins = {
-          {
-            name = '@vue/typescript-plugin',
-            location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
-            languages = { 'javascript', 'typescript', 'vue' },
-          },
+      filetypes = {
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+        'vue',
+      },
+      settings = {
+        tsserver_plugins = {
+          '@vue/typescript-plugin',
         },
       },
-      filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx', 'vue' },
     }
   end,
 }
