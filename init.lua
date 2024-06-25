@@ -488,9 +488,6 @@ require('lazy').setup({
 
       local servers = {
         pyright = {},
-        black = {},
-        flake8 = {},
-        isort = {},
         emmet_language_server = {},
         tsserver = {
           init_options = {
@@ -506,7 +503,6 @@ require('lazy').setup({
         },
         volar = {},
         eslint = {},
-        prettierd = {},
         lua_ls = {
           settings = {
             Lua = {
