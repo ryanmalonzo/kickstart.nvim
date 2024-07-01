@@ -758,7 +758,10 @@ require('lazy').setup({
         },
       }
 
-      require('mini.completion').setup {}
+      require('mini.completion').setup {
+        -- Virtually disable completion for this plugin and only use signature
+        delay = { completion = 10 ^ 7 },
+      }
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
