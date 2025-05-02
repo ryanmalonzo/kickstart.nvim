@@ -417,7 +417,35 @@ require('lazy').setup({
             },
           },
         },
-        ts_ls = {},
+        vtsls = {
+          settings = {
+            typescript = {
+              updateImportsOnFileMove = { enabled = 'always' },
+              inlayHints = {
+                parameterNames = { enabled = 'all' },
+                parameterTypes = { enabled = true },
+                variableTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = true },
+                functionLikeReturnTypes = { enabled = true },
+                enumMemberValues = { enabled = true },
+              },
+            },
+            javascript = {
+              updateImportsOnFileMove = { enabled = 'always' },
+              inlayHints = {
+                parameterNames = { enabled = 'literals' },
+                parameterTypes = { enabled = true },
+                variableTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = true },
+                functionLikeReturnTypes = { enabled = true },
+                enumMemberValues = { enabled = true },
+              },
+            },
+            vtsls = {
+              enableMoveToFileCodeAction = true,
+            },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -478,6 +506,9 @@ require('lazy').setup({
         lua = { 'stylua' },
         python = { 'isort', 'black' },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        typescript = { 'prettierd', 'prettier', stop_after_first = true },
+        javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
