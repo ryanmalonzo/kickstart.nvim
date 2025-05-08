@@ -25,4 +25,13 @@ return {
       vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
     end,
   },
+
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function()
+      require('copilot').setup {}
+    end,
+  },
 }
