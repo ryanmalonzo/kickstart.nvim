@@ -582,18 +582,28 @@ require('lazy').setup({
   },
 
   {
-    -- :Telescope colorscheme
-    'folke/tokyonight.nvim',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
     config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require('tokyonight').setup {
+      require('catppuccin').setup {
+        color_overrides = {
+          mocha = {
+            base = '#000000',
+          },
+        },
+        flavour = 'mocha',
+        integrations = {
+          blink_cmp = true,
+          leap = true,
+          which_key = true,
+        },
         styles = {
-          comments = { italic = false },
+          comments = {},
         },
       }
 
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
 
