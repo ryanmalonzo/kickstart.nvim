@@ -8,6 +8,3 @@ map('n', '<C-v>', '<cmd> %d | 0put+ <CR>')
 
 -- duplicate a line and comment out the first line
 map('n', 'yc', 'yy<cmd>normal gcc<CR>p')
-
--- open netrw
-map('n', '-', ':Ex<CR>')
