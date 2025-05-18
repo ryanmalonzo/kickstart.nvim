@@ -417,6 +417,7 @@ require('lazy').setup({
             },
           },
         },
+        terraformls = {},
         vtsls = {
           settings = {
             typescript = {
