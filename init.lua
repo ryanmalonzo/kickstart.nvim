@@ -405,6 +405,7 @@ require('lazy').setup({
       -- LSPs to install by default
       -- :help lspconfig-all
       local servers = {
+        buf_ls = {},
         gopls = {},
         pyright = {},
         lua_ls = {
