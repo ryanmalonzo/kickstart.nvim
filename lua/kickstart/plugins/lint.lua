@@ -8,6 +8,7 @@ return {
         markdown = { 'markdownlint' },
         javascript = { 'eslint_d' },
         javascriptreact = { 'eslint_d' },
+        proto = { 'buf_lint' },
         typescript = { 'eslint_d' },
         typescriptreact = { 'eslint_d' },
       }
